@@ -100,7 +100,7 @@ plot_model(model, to_file=filename, show_shapes=True)
 from data.const import N_EPOCHS, BATCH_SIZE
 
 # Calcule du modèle (r{n_rows}-l{n_layers}-e{n_epochs}-b{batch_size})
-filename = "output/model-l{}-r{}-e{}-b{}.h5".format(n_layers, N_ROWS, N_EPOCHS, BATCH_SIZE)
+filename = "output1/model-l{}-r{}-e{}-b{}.h5".format(n_layers, N_ROWS, N_EPOCHS, BATCH_SIZE)
 checkpoint = ModelCheckpoint(filename, monitor='val_loss', verbose=1, save_best_only=True, 
                              mode='min')
 model.fit(xtrain, ytrain, epochs=N_EPOCHS, batch_size=BATCH_SIZE, validation_data=(xval, yval), 
